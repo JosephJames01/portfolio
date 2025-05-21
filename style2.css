@@ -608,12 +608,10 @@ body {
   .sub-titlee {
   font-size: 14px;
   width: auto; /* Allow width to adjust dynamically */
+  height: 40%;
   }
   
-  .sub-titlee button {
-  font-size: 14px;
-  padding: 10px 20px; /* Adjust button size */
-  }
+ 
   
   .right {
   flex-basis: 100%; /* Take full width */

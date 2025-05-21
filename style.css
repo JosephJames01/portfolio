@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-         border: red solid 1px;      
+     border: red solid 1px;    
   
     
     /* font-family: 'Bebas Neue', sans-serif; */
@@ -208,7 +208,7 @@
     padding: 0;
     z-index: 5;
     display: flex;
-    scroll-margin-top: 00px;
+    scroll-margin-top: 100px;
     scroll-snap-align: start
   }
   .stack-area {
@@ -237,13 +237,24 @@
     top: 0;
     left: 0;
     position: sticky;
-    justify-content: center;
+    
     display: flex;
-   
+    justify-content: center; /* center .col horizontally */
+    align-items: center; 
    
     z-index: 3;
    
   }
+
+   .col{
+    width: 100%;
+   
+    height: 150%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } 
   
   
   /*Styling for the left elements content starts here...*/
@@ -254,13 +265,20 @@
     box-sizing: border-box;
     align-items: center;
     flex-direction: column;
+    
+  }
+
+  .titlex{
+    display: flex;
+    justify-content: flex-start;
+
   }
   .titleee {
     width: 50%;
-    font-size: 2vw;
+    font-size: 4vh;
     margin-top: 20%;
     font-weight: 700;
-    line-height:2.3vh;
+    line-height:5vh;
 
     color: #ffffff;
     font-family: 'Bebas Neue', sans-serif;
@@ -320,6 +338,8 @@
     transition: 0.7s ease-in-out;
     background-color: #170020;
     align-items: center;
+    top:40%;
+    left:40%;
    
     
     
@@ -375,7 +395,7 @@
   }
   
   @media (max-width: 1000px) {
-    .about{
+    .section1{
       height: auto !important;
     }
     .stack-area {
@@ -383,18 +403,34 @@
     align-items: center; 
     display: flex;/* Center content horizontally */
     height: auto !important;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
+
     }
     
     .left {
     flex-basis: 100%; /* Take full width */
-    height: 200px; /* Adjust height to fit content */
+    height: 00px; /* Adjust height to fit content */
     position: relative; /* Remove sticky positioning */
     padding: 20px; /* Add padding for spacing */
     text-align: center; /* Center text content */
     display: flex;
     justify-content: flex-start;
     margin-top: 200px;
+    }
+
+    .col{
+      position: none;
+      flex-direction: column;
+    }
+
+    .meimg{
+      width: 30vw;
+      max-width: 30vw;
+      min-width: 270px;
+      height: 50vh;
+      border-radius: 20px;
+      margin-top: 10%;
+     
     }
     
     .titleee {
@@ -407,6 +443,7 @@
     .sub-titlee {
     font-size: 14px;
     width: auto; /* Allow width to adjust dynamically */
+    margin-top: 50px;
     }
     
     .sub-titlee button {
@@ -423,8 +460,9 @@
     align-items: center;
     flex-wrap: wrap; /* Allow cards to wrap if necessary */
     padding: 20px; 
-    margin-top: 500px;/* Add padding for spacing */
+    margin-top: 200px;/* Add padding for spacing */
     }
+
     
     .card {
     position: relative; /* Remove absolute positioning for stacking */
@@ -434,6 +472,7 @@
     transform: none; /* Reset transformations for responsiveness */
     width: calc(100% - 40px); /* Ensure cards fit within the container with padding */
     max-width: 350px; /* Maintain a max width for cards */
+  
     }
     .card {
       opacity: 0;
@@ -449,6 +488,12 @@
     }
     }
 
+    .sub{
+      font-size: 2rem;
+    }
+    .content{
+      font-size: 2rem;
+    }
 
 
 /* SECTION 1 END */
