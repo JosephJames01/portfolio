@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-     border: red solid 1px;    
+     /* border: red solid 1px;     */
   
     
     /* font-family: 'Bebas Neue', sans-serif; */
@@ -269,27 +269,41 @@
   }
 
   .titlex{
+    margin-top: 100px;
     display: flex;
-    justify-content: flex-start;
-
+    width: 70%;
+    height: 77%;
+    flex-direction: column;
+    justify-content: top;
+    border-radius: 10px;
+    background-color: #00101b;
+    align-items: center;
+    box-shadow: 0 0 10px 5px rgba(221, 219, 219, 0.199);
+    max-width: 450px;
+    min-width: 40px;
+   
   }
   .titleee {
-    width: 50%;
+    width: 70%;
     font-size: 4vh;
     margin-top: 20%;
     font-weight: 700;
     line-height:5vh;
-
+   
     color: #ffffff;
     font-family: 'Bebas Neue', sans-serif;
+  
   }
   .sub-titlee {
     width: 420px;
- 
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 14px;
     margin-top: 30px;
     color: rgba(0, 0, 0, 0);
     font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 20px;
   }
   .links{
     size:contain;
@@ -311,15 +325,16 @@
 
     .linkedin{
       width: 2vw;
-    
+      min-width: 20px;
       outline: none;
       
     }
 
    .git{
-    width: 2vw;
+    width: 1.9vw;
     background: transparent;
     z-index: 50;
+    min-width: 20px;
   
   }
 
@@ -329,6 +344,7 @@
   
   .card {
     width: 35%;
+    min-width: 250px;
     height: 35%;
     border-radius: 25px;
     margin-bottom: 10px;
@@ -340,13 +356,15 @@
     align-items: center;
     top:40%;
     left:40%;
+   border: #00101b 1px solid ;
    
     
     
   }
 
   .meimg{
-    width: 35%;
+    width: 65%;
+    min-width: 55%;
     height: 20vw;
     border-radius: 20px;
     margin-top: 10%;
@@ -379,14 +397,19 @@
   }
 
   .Engineer{
-    width: 85%;
-    height: 85%;
+    width: 95%;
+    height: 95%;
    
   }
 
   .athlete{
     width: 85%;
     height: 85%;
+  }
+
+  .teamwork{
+    width: 105%;
+    height: 105%;
   }
   /*Styling for the card content ends here...*/
   
@@ -395,6 +418,15 @@
   }
   
   @media (max-width: 1000px) {
+    .navbar__logo{
+      font-size: 1.7rem;
+    }
+    .navbar__btn .button{
+      font-size: 1.0rem;
+      padding-inline: 5px;
+    }
+  
+    
     .section1{
       height: auto !important;
     }
@@ -405,6 +437,12 @@
     height: auto !important;
     /* overflow-x: hidden; */
 
+    }
+
+    .titlex{
+      margin-top: -50px;
+      height: 110%;
+      width: 95%;
     }
     
     .left {
@@ -424,8 +462,8 @@
     }
 
     .meimg{
-      width: 30vw;
-      max-width: 30vw;
+      width: 32vw;
+      max-width: 32vw;
       min-width: 270px;
       height: 50vh;
       border-radius: 20px;
