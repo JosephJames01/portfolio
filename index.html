@@ -1,10 +1,193 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-GB">
 <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Joseph Harding</title>
+    <meta name="description" content="Personal Portfolio and about">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" 
+    rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <section id="">
+        <nav class="navbar">
+          <div class="navbar__container">
+            <div class="navbar__toggle" id="mobile-menu">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+            </div>
+            <div class="navbar__logo">
+                Joseph <span class="logo-gradient">Harding</span>
+            </div>
+            <div class="navbar__btn">
+              <a href="#contact-form" class="button">Contact</a>
+            </div>
+          </div>
+          <ul class="navbar__menu">
+            <li class="navbar__item">
+              <a href="#section1" class="navbar__links">Home</a>
+            </li>
+            <li class="navbar__item">
+              <a href="#about1" class="navbar__links">About Me</a>
+            </li>
+            <li class="navbar__item">
+              <a href="#" class="navbar__links">Current projects</a>
+            </li>
+            <li class="navbar__item">
+              <a href="#oh-yeh" class="navbar__links">Athletics</a>
+            </li>
+          </ul>
+        </nav>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+              const mobileMenu = document.getElementById('mobile-menu');
+              const navbarMenu = document.querySelector('.navbar__menu');
+            
+              mobileMenu.addEventListener('click', function() {
+                this.classList.toggle('active');
+                navbarMenu.classList.toggle('active');
+              });
+            });
+        </script>
+    <section class="section1">
+      <div class="stack-area">
+        <div class="left">
+          <div class="titleee">Hey! Im Joseph Harding👋</div>
+          <img class="meimg" src="/joseph.jpeg" alt="">
+          <div class="sub-titlee">
+          
+            <div href="" class="links">
+              <img class="linkedin" src="InBug-White.png" alt=""> 
+            </div>
+
+            <div href="" class="links">
+              <img class="git"  src="github-mark-white.png" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="right">
+        <div class="col">
+          <div class="card">
+            <div class="sub"> 
+              <img class="Engineer" src="/colourful-illustration.png" alt="">
+            </div>
+            <div class="content">Engineer🛠️</div>
+          </div>
+          <div class="card">
+            <div class="sub">
+              <img class="athlete" src="sprint.png" alt="">
+            </div>
+            <div class="content">Athlete🏃</div>
+          </div>
+          <div class="card">
+            <div class="sub"></div>
+            <div class="content">Strategic thinker</div>  
+          </div>
+          <div class="card">
+            <div class="sub"></div>
+            <div class="content">Team Player</div>
+          </div>
+          <div class="card">
+            <div class="sub"></div>
+            <div class="content">Innovator
+                
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
+        // Original desktop functionality (untouched)
+        let cards = document.querySelectorAll(".card");
+        let stackArea = document.querySelector(".stack-area");
+        let lastScroll = window.scrollY;
+        let mobileMode = window.innerWidth <= 1000;
+        const revealedCards = new Set();
+        
+        function rotateCards() {
+          let angle = 0;
+          cards.forEach((card, index) => {
+            if (card.classList.contains("away")) {
+              card.style.transform = `translateY(-120vh) rotate(-48deg)`;
+            } else {
+              card.style.transform = `rotate(${angle}deg)`;
+              angle = angle - 10;
+            }
+            card.style.zIndex = cards.length - index;
+          });
+        }
+        
+        function handleDesktopScroll() {
+          let distance = window.innerHeight * 0.5;
+          let topVal = stackArea.getBoundingClientRect().top;
+          let index = Math.floor(-1 * (topVal / distance + 1));
+        
+          for(let i = 0; i < cards.length; i++) {
+            cards[i].classList.toggle("away", i <= index);
+          }
+          rotateCards();
+        }
+        
+        // Genius mobile implementation
+        function handleMobileScroll() {
+          const scrollDir = window.scrollY > lastScroll;
+          lastScroll = window.scrollY;
+        
+          cards.forEach((card, index) => {
+            const rect = card.getBoundingClientRect();
+            const triggerPoint = window.innerHeight * 0.8;
+            
+            if (scrollDir && rect.top < triggerPoint && !revealedCards.has(card)) {
+              revealedCards.add(card);
+              card.style.transitionDelay = `${index * 0.3}s`;
+              card.classList.add('revealed');
+            }
+          });
+        }
+        
+        // Universal scroll handler
+        function handleScroll() {
+          if (mobileMode) handleMobileScroll();
+          else handleDesktopScroll();
+        }
+        
+        // Initial setup
+        if (!mobileMode) {
+          rotateCards();
+          window.addEventListener('scroll', handleScroll);
+        }
+        
+        // Resize handler genius
+        function handleResize() {
+          mobileMode = window.innerWidth <= 1000;
+          
+          if (mobileMode) {
+            cards.forEach(card => {
+              card.style.transform = '';
+              card.style.zIndex = '';
+              card.classList.remove('away');
+            });
+            window.addEventListener('scroll', handleScroll);
+          } else {
+            revealedCards.clear();
+            cards.forEach(card => {
+              card.style.transitionDelay = '';
+              card.classList.remove('revealed');
+            });
+            rotateCards();
+            window.addEventListener('scroll', handleScroll);
+          }
+        }
+        
+        window.addEventListener('resize', handleResize);
+        handleResize(); // Initial check
+      </script>
+    </section>
 </body>
 </html>

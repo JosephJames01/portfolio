@@ -1,0 +1,454 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+         border: red solid 1px;      
+  
+    
+    /* font-family: 'Bebas Neue', sans-serif; */
+  }
+
+  html {
+    overflow-x: initial;
+    background-color: #000;
+    scroll-behavior: smooth;
+    overscroll-behavior: none; 
+    scroll-snap-type: y proximity;
+  }
+
+  /* NAV */
+  .navbar {
+    background: rgb(7, 7, 7);
+    padding: 20px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+   
+    z-index: 100;
+  
+  }
+  
+  .navbar__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px;
+    min-width: 85%;
+    border-radius: 10px;
+    background: #00101b;
+    z-index: 1000;
+    min-height: 70px;
+    box-shadow: 0 0 10px 5px rgba(221, 219, 219, 0.37);
+   
+  }
+  
+  .navbar__toggle {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40px;
+    height: 19px;
+  
+    z-index: 1001;
+  }
+  
+  .bar {
+    height: 3px;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  
+  .navbar__menu {
+    display: none;
+    flex-direction: column; 
+    position: fixed;
+    margin-top: 140px ;
+    width: 85%;
+    height: 300px;
+    background-color: #000000;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    list-style-type: none;
+  }
+  
+  .navbar__menu.active {
+    display: flex;
+  }
+  
+  .navbar__item {
+    margin: 15px 0;
+    list-style-type: none;
+    width: 100%;
+  
+    
+  }
+  
+  .navbar__links {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-family: 'Bebas Neue', sans-serif;
+    position: relative;
+    transition: color 0.3s;
+    font-size: 2rem;
+    z-index: 590;
+    
+  }
+  
+  .navbar__links::after {
+    content: ''; 
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    left: 50%;
+    background: #0842ff;
+    transition: width 0.4s ease, left 0.3s ease;
+  }
+  
+  .navbar__links:hover::after {
+    width: 100%;
+    left: 0;
+    background: #ff7b00;
+  }
+  
+  
+  .navbar__btn {
+    margin-left: auto;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  
+  
+  .navbar__btn .button {
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    background-image: linear-gradient(to right, #0c0c0b, #530033), linear-gradient(to right, #3d3d3d, #3d3d3d);
+    background-size: 200% 100%, 200% 100%;
+    background-position: 0% 0%, 100% 0%;
+    transition: background-position 0.5s ease;
+    color: #ffffff;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.2rem;
+   
+  }
+  
+  .navbar__btn .button:hover {
+    background-position: 100% 0%, 0% 0%;
+  }
+
+  .navbar__toggle.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .navbar__toggle.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  
+  .navbar__toggle.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .navbar__logo {
+    color: white;
+    margin-left: auto;
+    font-size: 2rem;
+    flex: 0 0 auto; 
+    font-family:  "Cedarville Cursive", cursive;
+    font-weight: 500;
+    position: relative; 
+    display: inline-block;
+    padding-bottom: 5px; 
+  }
+  
+  .navbar__logo::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #0145ff, #ff66c4);
+    border-radius: 2px;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+  }
+  
+  .navbar__logo:hover::after {
+    transform: scaleX(1);
+    height: 2px;
+  }
+  
+
+.logo-gradient {
+    background: linear-gradient(90deg, #006eff, #5c003a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* END NAV */
+
+  /* inside section1 */
+  .section1 {
+    width: 100%;
+    height: 300vh;
+    margin: 0;
+    padding: 0;
+    z-index: 5;
+    display: flex;
+    scroll-margin-top: 00px;
+    scroll-snap-align: start
+  }
+  .stack-area {
+    width: 100%;
+    min-height: 100%;
+    position: relative;
+    background: rgb(0, 0, 0);
+    display: flex;
+    z-index: 5;
+  
+    
+    
+  }
+  .left {
+    height: 100vh;
+    flex-basis: 50%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    
+  }
+  .right {
+    height: 100vh;
+    flex-basis: 50%;
+    top: 0;
+    left: 0;
+    position: sticky;
+    justify-content: center;
+    display: flex;
+   
+   
+    z-index: 3;
+   
+  }
+  
+  
+  /*Styling for the left elements content starts here...*/
+  .left {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    box-sizing: border-box;
+    align-items: center;
+    flex-direction: column;
+  }
+  .titleee {
+    width: 50%;
+    font-size: 2vw;
+    margin-top: 20%;
+    font-weight: 700;
+    line-height:2.3vh;
+
+    color: #ffffff;
+    font-family: 'Bebas Neue', sans-serif;
+  }
+  .sub-titlee {
+    width: 420px;
+ 
+    font-size: 14px;
+    margin-top: 30px;
+    color: rgba(0, 0, 0, 0);
+    font-family: 'Courier New', Courier, monospace;
+  }
+  .links{
+    size:contain;
+    background: rgb(0, 0, 0);
+    outline: none;
+    margin-left: 10px ;
+    padding: 10px 10px;
+    border-radius: 5px;
+    display: inline;
+    
+  }
+
+  .links:hover{
+    cursor: pointer;
+   
+   
+    
+  }
+
+    .linkedin{
+      width: 2vw;
+    
+      outline: none;
+      
+    }
+
+   .git{
+    width: 2vw;
+    background: transparent;
+    z-index: 50;
+  
+  }
+
+  
+
+  /*Styling for the left elements content ends here...*/
+  
+  .card {
+    width: 35%;
+    height: 35%;
+    border-radius: 25px;
+    margin-bottom: 10px;
+    position: absolute;
+    top: calc(50% - 175px);
+    left: calc(50% - 175px);
+    transition: 0.7s ease-in-out;
+    background-color: #170020;
+    align-items: center;
+   
+    
+    
+  }
+
+  .meimg{
+    width: 35%;
+    height: 20vw;
+    border-radius: 20px;
+    margin-top: 10%;
+   
+  }
+  
+  
+  /*Styling for the card content starts here...*/
+  .card {
+    box-sizing: border-box;
+    padding: 35px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  
+  }
+  .sub {
+  
+    font-size: 20px;
+    font-weight: 700;
+    font-family: monospace;
+    color: white;
+  }
+  .content {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.0vw;
+    font-weight: 700;
+    line-height: 54px;
+    color: white;
+  }
+
+  .Engineer{
+    width: 85%;
+    height: 85%;
+   
+  }
+
+  .athlete{
+    width: 85%;
+    height: 85%;
+  }
+  /*Styling for the card content ends here...*/
+  
+  .away {
+    transform-origin: bottom left;
+  }
+  
+  @media (max-width: 1000px) {
+    .about{
+      height: auto !important;
+    }
+    .stack-area {
+    flex-direction: column; /* Stack the left and right sections vertically */
+    align-items: center; 
+    display: flex;/* Center content horizontally */
+    height: auto !important;
+    overflow-x: hidden;
+    }
+    
+    .left {
+    flex-basis: 100%; /* Take full width */
+    height: 200px; /* Adjust height to fit content */
+    position: relative; /* Remove sticky positioning */
+    padding: 20px; /* Add padding for spacing */
+    text-align: center; /* Center text content */
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 200px;
+    }
+    
+    .titleee {
+    font-size: 48px; /* Adjust font size for smaller screens */
+    line-height: 52px;
+    width: auto; /* Allow width to adjust dynamically */
+    justify-content: flex-start;
+    }
+    
+    .sub-titlee {
+    font-size: 14px;
+    width: auto; /* Allow width to adjust dynamically */
+    }
+    
+    .sub-titlee button {
+    font-size: 14px;
+    padding: 10px 20px; /* Adjust button size */
+    }
+    
+    .right {
+    flex-basis: 100%; /* Take full width */
+    height: auto; /* Adjust height to fit content */
+    position: relative; /* Remove sticky positioning */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Allow cards to wrap if necessary */
+    padding: 20px; 
+    margin-top: 500px;/* Add padding for spacing */
+    }
+    
+    .card {
+    position: relative; /* Remove absolute positioning for stacking */
+    margin-bottom: 20px; /* Add spacing between cards */
+    left: auto;
+    top: auto;
+    transform: none; /* Reset transformations for responsiveness */
+    width: calc(100% - 40px); /* Ensure cards fit within the container with padding */
+    max-width: 350px; /* Maintain a max width for cards */
+    }
+    .card {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 5s cubic-bezier(0.165, 0.84, 0.44, 1);
+      pointer-events: none;
+    }
+    
+    .card.revealed {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: all;
+    }
+    }
+
+
+
+/* SECTION 1 END */
