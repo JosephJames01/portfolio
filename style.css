@@ -38,7 +38,7 @@
     padding: 10px 10px;
     min-width: 85%;
     border-radius: 10px;
-    background: #00101b;
+    background: #070014;
     z-index: 1000;
     min-height: 70px;
     box-shadow: 0 0 10px 5px rgba(221, 219, 219, 0.37);
@@ -268,6 +268,7 @@
     
   }
 
+
   .titlex {
     margin-top: 100px;
     display: flex;
@@ -277,7 +278,7 @@
     flex-direction: column;
     justify-content: flex-start; 
     border-radius: 10px;
-    background-color: #00101b;
+    background-color: #070014;
     align-items: center;
     box-shadow: 0 0 10px 5px rgba(221, 219, 219, 0.199);
     padding: 30px 0; 
@@ -540,3 +541,10 @@
 
 
 /* SECTION 1 END */
+
+/* SECTION 2 PORT */
+.section2Port{
+height: 100vh;
+color: #000;
+
+}
