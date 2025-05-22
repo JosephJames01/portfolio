@@ -61,7 +61,7 @@
         <div class="left">
           <div class="titlex">
           <div class="titleee">Hey! Im Joseph Harding👋</div>
-          <img class="meimg" src="/joseph.jpeg" alt="">
+          <img class="meimg" src="/josephforgit.webp" alt="">
           <div class="sub-titlee">
           
             <a href="https://www.linkedin.com/in/joe-harding-458a23312/" class="links">
@@ -195,11 +195,47 @@
         window.addEventListener('resize', handleResize);
         handleResize(); // Initial check
       </script>
+      <script>
+        function getOuterHeightWithMargins(element) {
+          const style = window.getComputedStyle(element);
+          const marginTop = parseFloat(style.marginTop) || 0;
+          const marginBottom = parseFloat(style.marginBottom) || 0;
+          return element.getBoundingClientRect().height + marginTop + marginBottom;
+        }
+        
+        function setSection1Height() {
+          if (window.innerWidth <= 1000) {
+            const section1 = document.querySelector('.section1');
+            const stackArea = document.querySelector('.stack-area');
+            if (section1 && stackArea) {
+              // Wait for layout (and images) to settle
+              setTimeout(function() {
+                const totalHeight = getOuterHeightWithMargins(stackArea);
+                section1.style.setProperty('height', totalHeight + 'px', 'important');
+                console.log('Set section1 height to', totalHeight + 'px');
+              }, 100);
+            }
+          } else {
+            const section1 = document.querySelector('.section1');
+            if (section1) {
+              section1.style.height = '';
+            }
+          }
+        }
+        
+        window.addEventListener('load', setSection1Height);
+        window.addEventListener('resize', setSection1Height);
+        </script>
+        
+        
+        
     </section>
 
    <section class="section2Port">
-    
-
+    <div class="Titleport">My projects</div>
+     <div class="projectContainer">
+        
+     </div>
    </section>
 </body>
 </html>
