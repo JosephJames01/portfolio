@@ -13,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="/josephforgit.webp">
 </head>
 <body>
 
@@ -60,10 +61,12 @@
         </script>
     <section class="section1">
       <div class="stack-area">
+       
         <div class="left">
           <div class="titlex">
+         
           <div class="titleee">Hey! Im Joseph Harding👋</div>
-          <img class="meimg" src="/josephforgit.webp" alt="">
+          <img class="meimg" src="/josephforgit.webp" alt="Joseph Harding" width="250">
           <div class="sub-titlee">
           
             <a href="https://www.linkedin.com/in/joe-harding-458a23312/" class="links">
@@ -81,15 +84,15 @@
         <div class="col">
           <div class="card">
             <div class="sub"> 
-              <img class="Engineer" src="/colourful-illustration.png" alt="">
+              <img class="Engineer" src="/engineerrr.webp" alt="">
               
             </div>
-            <div class="contentt">Multi-Disciplinary Engineer🛠️ Skilled in...</div>
+            <div class="contentt">Ambitious Engineer🛠️ Skilled in...</div>
           </div>
           <div class="card">
             <div class="subb">
              1st class hons degree from an IET accredited course.
-             <img class="robotvec" src="/robotvector.png" alt="">
+             <img class="robotvec" src="/robotvector.webp" alt="">
             </div>
             <div class="contentt">Robotics </div>
           </div>
@@ -156,7 +159,7 @@
             
             if (scrollDir && rect.top < triggerPoint && !revealedCards.has(card)) {
               revealedCards.add(card);
-              card.style.transitionDelay = `${index * 0.3}s`;
+              card.style.transitionDelay = `${index * 0.9}s`;
               card.classList.add('revealed');
             }
           });
@@ -236,7 +239,7 @@
     </section>
 
    <section class="section2Port">
-    <div class="Titleport">My projects</div>
+    <div class="Titleport">Noteable projects</div>
      <div class="projectContainer">
         <div class="WhouseRobot">
           <div class="hi">Autonomous Inventory Detection Robot</div>
@@ -262,12 +265,28 @@
         </div>
         <div class="AIProdpredict">
           <div class="hi">AI Productivity Predictor</div>
+          <div class="roww">
+            <img class="aiclip" src="/aiclip.webp" alt="">
+            <div class="langContain">
+            <div class="lang">Scikit Learn</div>
+            <div class="lang">Binary Classifier</div>
+            <div class="lang">Python</div>
+           </div>
+          </div>
         </div>
         <div class="Reactsitee">
-          <div class="hi"> Custom React Site for sports nutritionist</div>
+          <div class="hi"> Custom React App </div>
+           <div class="roww">
+            <img class="appvect" src="/app.webp" alt="">
+            <div class="langContain">
+            <div class="lang">React.js</div>
+            <div class="lang">Expo</div>
+            <div class="lang">Tailwind</div>
+          </div>
         </div>
      </div>
    </section>
+   <section class=""></section>
    
 </body>
 </html>
