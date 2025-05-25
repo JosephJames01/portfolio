@@ -532,7 +532,7 @@
 
     .meimg{
       height: 50vh;
-      width: 250px;
+      width: 350px;
     }
 
     .Engineer{
@@ -887,4 +887,74 @@ background-color: #070014;
     margin-left: 5px ;
     width: 40%;
   }
+}
+/* section 2 end */
+
+.section3{
+height: fit-content;
+background-color: #292929;
+display: flex;
+flex-direction: column;
+align-items: center;
+z-index: 5;
+justify-content: flex-start;
+z-index: 4;
+padding: 20px;
+
+}
+
+
+/* SPRINT TIMING PAGE */
+
+.sprinttimingsys{
+  height: fit-content;
+  background-color: #292929;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 5;
+  justify-content: flex-start;
+  z-index: 4;
+  padding: 20px;
+  margin-top: 200px;
+
+}
+
+
+
+.gallery{
+  background-color: #3f07a8;
+  height: fit-content;
+  width: 90vw;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding: 20px;
+  justify-content: space-evenly;
+  
+  box-shadow: 0 0 10px 5px rgba(221, 219, 219, 0.37);
+}
+
+.information{
+  background-color: #3f07a8;
+  width: 60vw;
+  font-family: 'Bebas Neue', sans-serif;
+  border-radius: 10px;
+  color: white;
+  height: fit-content;  /*subject to change */
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 100;
+  font-size: 1.5rem;
+  box-shadow: 0 0 10px 5px rgba(221, 219, 219, 0.37);
+  padding: 10px ;
+}
+
+.features{
+  align-self: start;
+  line-height: 40px;
+  margin-top: 10px;
 }
