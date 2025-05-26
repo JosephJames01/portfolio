@@ -58,37 +58,40 @@
         </script>
 
         <section class="sprinttimingsys">
-            <div class="Titleportt">Autonomous Inventory Detection Robot</div>
-            <div class="gallery">
-                <img  class="BOT" src="IMG_1929 (1).webp" alt="Turtlebot with webcam">
-                <img class="pidgraph" src="graph pid.webp" alt="system response">
-                <img  class="processedd" src="inaction.webp" alt="processed image from robot">
-                <img class="Turnposition" src="IMG_3380.webp" alt="Turn position">
-                
-              
-            </div>
+            <div class="Titleportt">AI Productivity Predictor</div>
+          
             <div class="information">
-                <span class="sprintTitlee">Features</span>
-                An inventory detection Robotic system for warehouses using ROS and PID line following. It detects the line using computer vision techniques, 
-                to keep the system fast and responsive. This system was aimed at SMEs due to the cheap operating nature of the system. 
+                <span class="sprintTitlee">Features (raw model)</span>
+               Ai classifcation models,  from scratch  to predict worker productivity based on worker inputs, using a custom made neural network taht utillises sigmoid function and back propogation.
                 <div class="features">
-                  <span class="bullet">• </span>Line detection using HSI, closing Morph operation, <br>Gaussian Blur, colour mask  <br>
-                  <span class="bullet">• </span>error detection + PID (Zieger-Nicholas tuned) <br>
-                  <span class="bullet">• </span> YOLOv8n tuned on custom inventory selection <br>
-                  <span class="bullet">• </span> Position detection using line aspect ratio, to stop and turn + capture an image of inventory <br>
-                  <span class="bullet">• </span>Output displaying number of positions, inventory detected at each position and overall + confidence score. <br>
+                  <span class="bullet">• </span>Transforms raw productivity data into a binary classification problem  <br>
+                  <span class="bullet">• </span>Handcrafted Neural Network. Built from scratch using NumPy—no frameworks <br>
+                  <span class="bullet">• </span>Dynamic backpropagation with customizable learning rate  <br>
+                  <span class="bullet">• </span>Tracks F1-score, precision, recall, and accuracy to gauge model effectiveness <br>
+                  <span class="bullet">• </span>Plots a loss-over-epochs graph<br>
+                  
+                </div>
+                <span class="sprintTitlee">Features (Scikit Learn Model)</span>
+               Ai classifcation models, both from scratch and from SciKit learn to predict worker productivity based on worker inputs, using neural networks.
+                <div class="features">
+                  <span class="bullet">• </span>Uses scikit-learn for a polished, production-ready workflow (train-test splits, scaling, metrics). <br>
+                  <span class="bullet">• </span>Trains a neural network iteratively (warm_start=True) for fine-grained control over epochs. <br> Tracks loss and metrics (F1, precision, recall, ROC AUC) in real time. <br>
+                  <span class="bullet">• </span>Normalizes features to standardized scales for optimal neural net performance  <br>
+                  <span class="bullet">• </span>Plots error reduction over epochs to visualize learning dynamics <br>
+
                   
                 </div>
                 <span class="sprintTitlee">Components</span>
                 <div class="features">
-                  <span class="bullet">• </span>Turtlebot (raspberryPi, OpenCR cortex, 2 x Dynamixel motor, computer webcam, LiPo battery)<br>
-                  <span class="bullet">• </span>ROS Noetic<br>
+                  <span class="bullet">• </span>SciKit Learn<br>
+                  <span class="bullet">• </span>Sigmoid Function<br>
                   <span class="bullet">• </span>Python <br>
-                  <span class="bullet">• </span>CMake<br>
-                   <span class="bullet">• </span>4 ROS nodes (USB_cam, Robot_controller, Turtlebot_core, Turtlebot_Diagnostics)<br>
+                  <span class="bullet">• </span>Back Propogation<br>
+                  <span class="bullet">• </span>Industry-Standard Model Analysis Metrics<br>
+              
                 </div>
                 <span class="sprintTitlee">Repo</span>
-                <a href="https://github.com/JosephJames01/linefollow_detectionsys" class="links2">
+                <a href="https://github.com/JosephJames01/ai-classification" class="links2">
                 <img class="git"  src="github-mark-white.png" alt="">
                 </a>
             </div>
