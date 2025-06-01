@@ -720,6 +720,7 @@ padding: 20px;
   position:relative;
   display: inline-block;
   padding-bottom: 5px; 
+  text-align: center;
 
 }
 
@@ -783,6 +784,8 @@ margin-bottom: 50px;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  margin: none;
+
  
 
 }
@@ -853,10 +856,11 @@ background-color: #070014;
   z-index: 5;
   border-radius: 15px;
   display:flex;
-  align-items: flex-start;
+   align-items: flex-start; 
   flex-direction: column;
   padding: 15px;
   margin-bottom: 50px;
+ 
 }
 
 .Reactsitee:hover{
@@ -874,6 +878,7 @@ background-color: #070014;
   height: 90%;
   margin-top: 10px;
   border-radius: 10px;
+
 }
 
 .sp{
@@ -881,11 +886,13 @@ background-color: #070014;
   height: 90%;
   margin-top: 10px;
   border-radius: 10px;
+ 
 }
 .hi{
   color: white;
   font-size: 2rem;
   font-family:  'Bebas Neue', sans-serif;
+
 
 }
 
@@ -896,8 +903,7 @@ background-color: #070014;
  align-items: center;
   width: fit-content;
   height: 200px;
-
-   margin-left: 15px;
+  margin-left: 15px;
 }
 
 .lang{
@@ -955,6 +961,9 @@ background-color: #070014;
     flex-direction: row;
     flex-wrap: wrap;
     height: fit-content;
+    text-align: center;
+     justify-content: center;
+    align-items: center !important;
   }
 
   .SprintTT{
@@ -962,20 +971,26 @@ background-color: #070014;
     flex-direction: row;
     flex-wrap: wrap;
     height: fit-content;
+     text-align: center;
+      justify-content: center;
   }
 
   .AIProdpredict{
    width: 95%;
     flex-direction: row;
     flex-wrap: wrap;
+     text-align: center;
     height: fit-content;
+   justify-content: center;
   }
 
   .Reactsitee{
     width: 95%;
     flex-direction: row;
     flex-wrap: wrap;
-    height: fit-content
+    height: fit-content;
+    text-align: center;
+   justify-content: center;
   }
 
   .hi{
@@ -992,14 +1007,42 @@ background-color: #070014;
   }
 
   .lang{
-    font-size: 0.9rem;
-    width: 100%;
+    font-size: 0.8rem;
+    width: 100px;
+   
   }
   
   .langContain{
-    margin-left: 5px ;
+    margin-left: none !important;
     width: 40%;
   }
+
+  .sp{
+    height: 140px;
+    width:170px;
+    margin-right: none;
+  }
+  .roww{
+    margin: none;
+  }
+}
+
+@media (max-width:400px){
+  .roww{
+    flex-direction: column;
+    align-items: center;
+    margin-right: none !important;
+   align-self: center ;
+    justify-self: center !important;
+ 
+    
+  }
+
+  .langContain{
+    margin-right: 15px !important;
+  }
+
+
 }
 /* section 2 end */
 
