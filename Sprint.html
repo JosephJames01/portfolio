@@ -30,6 +30,59 @@
               <a href="#contact-form" class="button">Contact</a>
             </div>
           </div>
+
+          <div class="modal-overlay" id="contactModal">
+              <div class="modal-content">
+                  <span class="close-btn" onclick="closeModal()">&times;</span>
+                  <form class="formm" action="https://api.web3forms.com/submit" method="POST">
+                      <input type="hidden" name="access_key" value="5de1d12e-1676-4b24-8e1a-153f2a206dac">
+                      <input id="inpu1" type="text" name="name" placeholder="Your Name" required>
+                      <input id="inpu2" type="email" name="email" placeholder="Your Email" required>
+                      <textarea id="inpu3" name="message" placeholder="Your Message" required></textarea>
+                      <input type="checkbox" name="botcheck" class="hidden">
+                      <button id="submitt"type="submit">Submit Form</button>
+                      <input type="hidden" name="redirect" value="https://josephharding.co.uk/success.html">
+
+                  </form>
+              </div>
+          </div>
+
+
+        <script>
+            const contactButton = document.querySelector('a[href="#contact-form"]');
+            const modal = document.getElementById('contactModal');
+
+            contactButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                modal.style.display = 'flex';
+            });
+
+            function closeModal() {
+                modal.style.display = 'none';
+            }
+
+            // Close modal when clicking outside
+            window.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    closeModal();
+                }
+            });
+
+            // Close modal with ESC key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    closeModal();
+                }
+            });
+
+            
+        document.getElementById('contactForm').addEventListener('submit', function() {
+            setTimeout(() => {
+                this.reset();
+            }, 1000);
+        });
+        </script>
+
           <ul class="navbar__menu">
             <li class="navbar__item">
               <a href="/index.html" class="navbar__links">Home</a>
@@ -70,10 +123,10 @@
             <div class="information">
                 <span class="sprintTitlee">Features</span>
                 This project is a high-precision, Arduino-based sprint timing system (protoype). <br>
-                It uses three modules (start, finish and laser) <br> Clock synchronization is achieved using a PI controller, 
+                It uses three modules (start, finish and laser). <br> Clock synchronization is achieved using a PI controller, 
                 inspired by IEEE 1588 PTP.  
                 <div class="features">
-                  <span class="bullet">• </span>sub 0.01 precision <br>
+                  <span class="bullet">• </span>sub 0.01s precision <br>
                   <span class="bullet">• </span>laser break Detection <br>
                   <span class="bullet">• </span> set and gun sounds imitating race conditions <br>
                   <span class="bullet">• </span> screen displaying infomation <br>
@@ -89,7 +142,8 @@
                   <span class="bullet">• </span> Elegoo UNO R3 <br>
                   <span class="bullet">• </span> Tactile Button<br>
                   <span class="bullet">• </span> Miscellaneous ie battery holder, <br> resistor, capcitor, on switch, wires<br>
-                  <span class="bullet">• </span> Plastic Enclosures
+                  <span class="bullet">• </span> Plastic Enclosures <br>
+                   <span class="bullet">• </span> Class 2 laser
                 </div>
                 <span class="sprintTitlee">Repo</span>
                 <a href="https://github.com/JosephJames01/SprintTiming" class="links2">
